@@ -1,37 +1,37 @@
 export class ObserverList {
-	constructor() {
-		this.observerList = [];
-	}
+    constructor() {
+        this.observerList = [];
+    }
 
-	add(obj) {
-		return this.observerList.push(obj);
-	}
+    add(obj) {
+        return this.observerList.push(obj);
+    }
 
-	count() {
-		return this.observerList.length;
-	}
+    count() {
+        return this.observerList.length;
+    }
 
-	get(index) {
-		if (index > -1 && index < this.count()) {
-			return this.observerList[index];
-		}
-	}
+    get(index) {
+        if (index > -1 && index < this.count()) {
+            return this.observerList[index];
+        }
+    }
 
-	indexOf(obj, startAt = 0) {
-		var index = startAt;
+    indexOf(obj, startAt = 0) {
+        var index = startAt;
 
-		while(index < this.count()) {
-			if (obj === this.observerList[index]) {
-				return index
-			}
+        while (index < this.count()) {
+            if (obj === this.observerList[index]) {
+                return index
+            }
 
-			i++;
-		}
+            i++;
+        }
 
-		return -1;
-	}
+        return -1;
+    }
 
-	removeAt(index) {
-		this.observerList.splice(index, 1);
-	}
+    removeAt(index) {
+        this.observerList.splice(index, 1);
+    }
 }
